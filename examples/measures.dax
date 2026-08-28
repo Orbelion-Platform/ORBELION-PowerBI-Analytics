@@ -1,0 +1,112 @@
+// Sanitized formulas verified in the source semantic model.
+// No production values, client identifiers, or connection metadata are included.
+
+Ventas Netas = SUM(fact_ventas[total])
+
+Costo de Ventas = SUM(fact_ventas[costo])
+
+Utilidad Bruta = [Ventas Netas] - [Costo de Ventas]
+
+Margen Bruto % = DIVIDE([Utilidad Bruta], [Ventas Netas])
+
+Gastos Totales = SUM(fact_gastos[importe])
+
+Utilidad Operativa = [Utilidad Bruta] - [Gastos Totales]
+
+Valor Inventario = SUM(fact_inventario[valor])
+
+Ticket Promedio = DIVIDE([Ventas Netas], [Transacciones])
+
+Crecimiento Ventas % = [Variación Ventas %]
+
+Cantidad Vendida = SUM(fact_ventas[cantidad])
+
+Clientes Activos = DISTINCTCOUNT(fact_ventas[cliente_key])
+
+Productos Vendidos = DISTINCTCOUNT(fact_ventas[producto_key])
+
+Venta Promedio por Cliente = DIVIDE([Ventas Netas], [Clientes Activos])
+
+Descuento Total = SUM(fact_ventas[descuento])
+
+Descuento % = DIVIDE([Descuento Total], SUM(fact_ventas[subtotal]))
+
+Precio Promedio = DIVIDE(SUM(fact_ventas[subtotal]), [Cantidad Vendida])
+
+Transacciones = DISTINCTCOUNT(fact_ventas[venta_id])
+
+Gasto Promedio = DIVIDE([Gastos Totales], DISTINCTCOUNT(fact_gastos[gasto_id]))
+
+% Gastos sobre Ventas = DIVIDE([Gastos Totales], [Ventas Netas])
+
+Compras Totales =
+    CALCULATE(
+        SUM(fact_compras[importe]),
+        TREATAS(VALUES(dim_fecha[fecha_key]), fact_compras[fecha_key])
+    )
+
+Cantidad Comprada =
+    CALCULATE(
+        SUM(fact_compras[cantidad]),
+        TREATAS(VALUES(dim_fecha[fecha_key]), fact_compras[fecha_key])
+    )
+
+Compra Promedio =
+    DIVIDE(
+        [Compras Totales],
+        CALCULATE(
+            DISTINCTCOUNT(fact_compras[compra_id]),
+            TREATAS(VALUES(dim_fecha[fecha_key]), fact_compras[fecha_key])
+        )
+    )
+
+Costo Unitario Promedio = DIVIDE([Compras Totales], [Cantidad Comprada])
+
+Proveedores Activos =
+    CALCULATE(
+        DISTINCTCOUNT(fact_compras[proveedor_key]),
+        TREATAS(VALUES(dim_fecha[fecha_key]), fact_compras[fecha_key])
+    )
+
+Productos Comprados =
+    CALCULATE(
+        DISTINCTCOUNT(fact_compras[producto_key]),
+        TREATAS(VALUES(dim_fecha[fecha_key]), fact_compras[fecha_key])
+    )
+
+Cantidad Movida = SUMX(fact_inventario, ABS(fact_inventario[cantidad]))
+
+Costo Unitario Promedio Inventario =
+    DIVIDE(
+        SUMX(
+            fact_inventario,
+            ABS(fact_inventario[cantidad]) * fact_inventario[costo_unitario]
+        ),
+        [Cantidad Movida]
+    )
+
+Ventas Mes Anterior =
+    CALCULATE([Ventas Netas], DATEADD(dim_fecha[fecha], -1, MONTH))
+
+Ventas Año Anterior =
+    CALCULATE([Ventas Netas], SAMEPERIODLASTYEAR(dim_fecha[fecha]))
+
+Ventas MTD = TOTALMTD([Ventas Netas], dim_fecha[fecha])
+
+Ventas YTD = TOTALYTD([Ventas Netas], dim_fecha[fecha])
+
+Variación Ventas % =
+    DIVIDE([Ventas Netas] - [Ventas Mes Anterior], [Ventas Mes Anterior])
+
+Gastos Mes Anterior =
+    CALCULATE([Gastos Totales], DATEADD(dim_fecha[fecha], -1, MONTH))
+
+Variación Gastos % =
+    DIVIDE([Gastos Totales] - [Gastos Mes Anterior], [Gastos Mes Anterior])
+
+Compras Mes Anterior =
+    CALCULATE([Compras Totales], DATEADD(dim_fecha[fecha], -1, MONTH))
+
+Variación Compras % =
+    DIVIDE([Compras Totales] - [Compras Mes Anterior], [Compras Mes Anterior])
+

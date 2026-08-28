@@ -1,0 +1,6 @@
+client_code,month,net_sales,cost_of_sales,total_expenses,inventory_value,transactions
+example_client,2026-01,125000,73000,21000,86000,625
+example_client,2026-02,132500,75500,22400,89500,648
+example_client,2026-03,141000,79200,23100,91750,681
+example_client,2026-04,138500,78100,22800,90500,669
+

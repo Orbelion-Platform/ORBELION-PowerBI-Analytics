@@ -1,0 +1,18 @@
+# Power BI local and binary artifacts
+*.pbix
+*.pbit
+**/.pbi/
+**/.cache/
+
+# Local configuration and secrets
+.env
+.env.*
+!*.example
+*.local
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+
