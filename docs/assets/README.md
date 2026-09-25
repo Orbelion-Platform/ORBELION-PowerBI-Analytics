@@ -1,6 +1,6 @@
 # Dashboard Assets
 
-The four `dashboard-*-synthetic.png` files are publication-ready portfolio examples generated from the verified dashboard layout.
+The six `dashboard-*-synthetic.png` files are publication-ready portfolio examples generated from the verified dashboard layout.
 
 ## Data boundary
 
@@ -12,4 +12,4 @@ The four `dashboard-*-synthetic.png` files are publication-ready portfolio examp
 
 ## Publication rule
 
-Only files ending in `-synthetic.png` are approved for the public portfolio. The four numbered source screenshots are local edit inputs and are explicitly ignored by Git.
+Only files ending in `-synthetic.png` are approved for the public portfolio. The six numbered source screenshots are local edit inputs and are explicitly ignored by Git.

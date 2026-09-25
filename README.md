@@ -159,9 +159,17 @@ The following publication-ready screenshots preserve the verified dashboard stru
 
 ![Synthetic Expenses dashboard](docs/assets/dashboard-expenses-synthetic.png)
 
+### Purchase Analysis
+
+![Synthetic Purchases dashboard](docs/assets/dashboard-purchases-synthetic.png)
+
 ### Inventory Analysis
 
 ![Synthetic Inventory dashboard](docs/assets/dashboard-inventory-synthetic.png)
+
+### Executive Insights
+
+![Synthetic Insights dashboard](docs/assets/dashboard-insights-synthetic.png)
 
 See the [asset publication notes](docs/assets/README.md) and [screenshot privacy checklist](screenshots/README.md) before adding or replacing images.
 

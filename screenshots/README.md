@@ -16,6 +16,8 @@ Suggested filenames:
 
 - `executive-overview-synthetic.png`
 - `sales-analysis-synthetic.png`
+- `purchases-analysis-synthetic.png`
 - `inventory-analysis-synthetic.png`
+- `insights-analysis-synthetic.png`
 
 Only synthetic assets should be linked from the public README. Local source screenshots must remain ignored by Git and must never be staged.
