@@ -1,6 +1,6 @@
 # Screenshot Publication Checklist
 
-This directory is reserved for sanitized dashboard screenshots. No production screenshot is included in the initial public portfolio.
+This directory is reserved for future sanitized dashboard exports. The current publication-ready examples live in `docs/assets/` and use synthetic `EXAMPLE CLIENT` data.
 
 Before adding an image:
 
@@ -18,3 +18,4 @@ Suggested filenames:
 - `sales-analysis-synthetic.png`
 - `inventory-analysis-synthetic.png`
 
+Only synthetic assets should be linked from the public README. Local source screenshots must remain ignored by Git and must never be staged.

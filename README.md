@@ -145,7 +145,25 @@ sequenceDiagram
 
 ## Screenshots
 
-The [screenshots](screenshots/README.md) directory is prepared for redacted dashboard exports. No production screenshot is included until it has passed the documented privacy checklist.
+The following publication-ready screenshots preserve the verified dashboard structure while using a fully synthetic `EXAMPLE CLIENT` scenario. Values, dates, customer labels, product labels, suppliers, and client identifiers were replaced; the images do not represent any real company's performance.
+
+### Executive Overview
+
+![Synthetic Executive Overview dashboard](docs/assets/dashboard-overview-synthetic.png)
+
+### Sales Analysis
+
+![Synthetic Sales dashboard](docs/assets/dashboard-sales-synthetic.png)
+
+### Expense Analysis
+
+![Synthetic Expenses dashboard](docs/assets/dashboard-expenses-synthetic.png)
+
+### Inventory Analysis
+
+![Synthetic Inventory dashboard](docs/assets/dashboard-inventory-synthetic.png)
+
+See the [asset publication notes](docs/assets/README.md) and [screenshot privacy checklist](screenshots/README.md) before adding or replacing images.
 
 ## Engineering Decisions
 
@@ -164,4 +182,3 @@ This is an independent Power BI Analytics project and public technical case stud
 ## Author
 
 Axel Ortega
-

@@ -16,3 +16,8 @@ Thumbs.db
 *.tmp
 *.bak
 
+# Private source screenshots used only for local sanitization
+/docs/assets/0.1 Overview.png
+/docs/assets/0.2 Ventas.png
+/docs/assets/0.3 Gastos.png
+/docs/assets/0.4 Inventario.png
