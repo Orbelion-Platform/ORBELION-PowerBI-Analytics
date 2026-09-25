@@ -161,7 +161,7 @@ The following publication-ready screenshots preserve the verified dashboard stru
 
 ### Purchase Analysis
 
-![Synthetic Purchases dashboard](docs/assets/dashboard-purchases-synthetic.png)
+![Synthetic Purchases dashboard](docs/assets/dashboard-purchases-consistent-synthetic.png)
 
 ### Inventory Analysis
 
